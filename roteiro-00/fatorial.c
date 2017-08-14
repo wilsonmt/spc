@@ -6,12 +6,12 @@
 
   Estratégia pensada:
   	Usar um for para percorrer todo o espaço de cálculo e assim
-		mutiplicar por todos os números menores do que o número escolhido.
+	mutiplicar por todos os números menores do que o número escolhido.
 
-		Uma opção pensada seria armazenar os valores do fatorial de 0 a 12,
-		dessa forma um menor tempo de execução seria alcançado, mas não sei se
-		essa prática seria considerada válida na disciplina, portanto decidi fazer
-		no método "tradicional"
+	Uma opção pensada seria armazenar os valores do fatorial de 0 a 12,
+	dessa forma um menor tempo de execução seria alcançado, mas não sei se
+	essa prática seria considerada válida na disciplina, portanto decidi fazer
+	no método "tradicional"
 */
 
 #include <stdio.h>
