@@ -17,14 +17,14 @@
 #include <stdio.h>
 int main()
 {
-	int entrada, resultado = 1;
-	scanf("%d", &entrada);
-	if (entrada != 0 && entrada != 1)
+	int input, result = 1;
+	scanf("%d", &input);
+	if (input != 0 && input != 1)
 	{
-		for (int i=entrada; i>=2; i--)
-			resultado *= i;
+		for (int i=input; i>=2; i--)
+			result *= i;
 	}
 
-	printf("%d\n", resultado);
+	printf("%d\n", result);
 	return 0;
 }

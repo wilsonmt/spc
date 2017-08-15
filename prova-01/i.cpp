@@ -1,23 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void calcula(int numEntradas)
+void calc(int numOfInputs)
 {
-    map <long long int, int> entradas;
-    long long int numSozinho, numInserido;
+    map <long long int, int> inputs;
+    long long int aloneNumber, insertedNumber;
 
-    for (int count=0; count<numEntradas; count++)
+    for (int count=0; count<numOfInputs; count++)
     {
-        scanf("%lld", &numInserido);
-        entradas[numInserido] += 1;
+        scanf("%lld", &insertedNumber);
+        inputs[insertedNumber] += 1;
     }
 
-    for (map<long long int, int>::iterator it=entradas.begin(); it!=entradas.end(); ++it)
+    for (map<long long int, int>::iterator it=inputs.begin(); it!=inputs.end(); ++it)
     {
         if (((it->second)%2)!=0)
         {
-            numSozinho=it->first;
-            printf("%lld\n", numSozinho);
+            aloneNumber=it->first;
+            printf("%lld\n", aloneNumber);
             break;
         }
     }
@@ -25,16 +25,16 @@ void calcula(int numEntradas)
 
 int main()
 {
-    int numEntradas;
-    scanf("%d", &numEntradas);
+    int numOfInputs;
+    scanf("%d", &numOfInputs);
 
     while(1)
     {
-        if (numEntradas==0)
+        if (numOfInputs==0)
             break;
         else
-            calcula(numEntradas);
-        scanf("%d", &numEntradas);
+            calc(numOfInputs);
+        scanf("%d", &numOfInputs);
     }
 
     return 0;

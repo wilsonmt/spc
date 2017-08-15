@@ -1,38 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void calcula()
+void calc()
 {
-    vector<string> palavras[51];
+    vector<string> words[51];
 
-    char entrada[3000];
-    fgets(entrada, 3000, stdin);
+    char input[3000];
+    fgets(input, 3000, stdin);
 
-    string palavra, saida;
-    int tamPalavra;
+    string word, output;
+    int wordSize;
 
-    char *token = std::strtok(entrada, " \n");
+    char *token = std::strtok(input, " \n");
     while (token != NULL) {
-        palavra = token;
-        tamPalavra = strlen(token);
-        palavras[tamPalavra].push_back(palavra);
+        word = token;
+        wordSize = strlen(token);
+        words[wordSize].push_back(word);
         token = std::strtok(NULL, " \n");
     }
 
     for (int count=50; count>0; count--)
     {
-        if (!palavras[count].empty())
+        if (!words[count].empty())
         {
-            for (int count2=0; count2<palavras[count].size(); count2++)
+            for (int count2=0; count2<words[count].size(); count2++)
             {
-                saida.append(palavras[count][count2]);
-                saida.append(" ");
+                output.append(words[count][count2]);
+                output.append(" ");
             }
 
         }
     }
-    saida = saida.substr(0, saida.size()-1);
-    printf("%s", saida.c_str());
+    output = output.substr(0, output.size()-1);
+    printf("%s", output.c_str());
     printf("\n");
 }
 
@@ -41,11 +41,11 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
 
-    int numCasosDeTeste;
-    scanf("%d \n", &numCasosDeTeste);
+    int numberOfTestCases;
+    scanf("%d \n", &numberOfTestCases);
 
-    for (int count=0; count<numCasosDeTeste; count++)
-        calcula();
+    for (int count=0; count<numberOfTestCases; count++)
+        calc();
 
     return 0;
 }

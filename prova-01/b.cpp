@@ -5,23 +5,23 @@ int main()
 {
     std::ios_base::sync_with_stdio(false);
 
-    int pulo, numCanos, count, resultado=1;
-    cin >> pulo >> numCanos;
-    int canos[numCanos];
+    int jump, numPipes, count, result=1;
+    cin >> jump >> numPipes;
+    int pipes[numPipes];
 
-    for (count=0; count<numCanos; count++)
-        cin >> canos[count];
+    for (count=0; count<numPipes; count++)
+        cin >> pipes[count];
 
-    for (count=0; count<numCanos-1; count++)
+    for (count=0; count<numPipes-1; count++)
     {
-        if ((canos[count+1] > canos[count]+pulo) || (canos[count+1] < canos[count]-pulo))
+        if ((pipes[count+1] > pipes[count]+jump) || (pipes[count+1] < pipes[count]-jump))
         {
-            resultado=0;
+            result=0;
             break;
         }
     }
 
-    if (resultado)
+    if (result)
         cout << "YOU WIN" << endl;
     else
         cout << "GAME OVER" << endl;

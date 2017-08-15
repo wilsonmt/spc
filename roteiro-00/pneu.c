@@ -6,16 +6,16 @@
 
   Estratégia pensada:
   	Calcular a diferença entre pressão desejada
-		e pressão lida e imprimí-la na tela.
+	e pressão lida e imprimí-la na tela.
 */
 
 #include <stdio.h>
 int main()
 {
-	int pressaoDesejada, pressaoLida, resultado;
-	scanf("%d", &pressaoDesejada);
-	scanf("%d", &pressaoLida);
+	int requiredPressure, measuredPressure, result;
+	scanf("%d", &requiredPressure);
+	scanf("%d", &measuredPressure);
 
-	resultado = pressaoDesejada - pressaoLida;
-	printf("%d\n", resultado);
+	result = requiredPressure - measuredPressure;
+	printf("%d\n", result);
 }

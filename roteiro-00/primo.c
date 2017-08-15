@@ -6,29 +6,29 @@
 
   Estratégia pensada:
 	  Calcular o resto da divisão do número por todos os outros números menores
-		do que ele e maiores do que 2 (que é considerado primo), se algum desses
-		restos encontrados for zero significa que o número é primo.
+	  do que ele e maiores do que 2 (que é considerado primo), se algum desses
+	  restos encontrados for zero significa que o número é primo.
 */
 #include <stdio.h>
 int main()
 {
-	int numero, resultado = 1, i;
-	scanf("%d", &numero);
+	int number, result = 1, i;
+	scanf("%d", &number);
 
-	if(numero<=2)
-		resultado=1;
+	if(number<=2)
+		result=1;
 	else
 	{
-		for (i=2; i<numero; i++	)
+		for (i=2; i<number; i++	)
 		{
-			if (numero%i == 0)
+			if (number%i == 0)
 			{
-				resultado = 0;
+				result = 0;
 				break;
 			}
 		}
 	}
-	if (resultado == 0)
+	if (result == 0)
 		printf("nao\n");
 	else
 		printf("sim\n");
